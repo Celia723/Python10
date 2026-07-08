@@ -19,7 +19,8 @@ class Arsenal:
 
     def get_artifacts_by_type(self, artifact_type: str) -> list[Artifact]:
         return list(filter(
-            lambda artifact: artifact.artifact_type == artifact_type, self._artifacts))
-    
+            lambda artifact:
+            artifact.artifact_type == artifact_type, self._artifacts))
+
     def total_power(self) -> int:
         return sum(map(lambda artifact: artifact.power, self._artifacts))
