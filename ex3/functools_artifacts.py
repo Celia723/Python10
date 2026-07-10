@@ -8,7 +8,7 @@ def spell_reducer(spells: list[int], operation: str) -> int:
     if not spells:
         return 0
 
-    valid_operations = {
+    valid_operations: dict[str, Callable[[int, int], int]] = {
         "add": add,
         "multiply": mul,
         "max": max,

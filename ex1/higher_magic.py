@@ -17,7 +17,7 @@ def less_than_42(num: int):
     return 42 > num
 
 
-def spell_combiner(spell1: callable, spell2: callable) -> callable:
+def spell_combiner(spell1: Callable, spell2: Callable) -> Callable:
 
     def combinator(target: str, power: int):
         res1 = spell1(target, power)
